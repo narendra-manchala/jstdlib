@@ -1,0 +1,48 @@
+{
+  "name": "jstdlib",
+  "version": "0.1.0",
+  "description": "The Modern Standard Library for JavaScript & TypeScript",
+  "type": "module",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit"
+  },
+  "exports": {
+    "./ds": {
+      "types": "./dist/ds/index.d.ts",
+      "import": "./dist/ds/index.js",
+      "require": "./dist/ds/index.cjs"
+    },
+    "./tree": {
+      "types": "./dist/tree/index.d.ts",
+      "import": "./dist/tree/index.js",
+      "require": "./dist/tree/index.cjs"
+    },
+    "./async": {
+      "types": "./dist/async/index.d.ts",
+      "import": "./dist/async/index.js",
+      "require": "./dist/async/index.cjs"
+    },
+    "./object": {
+      "types": "./dist/object/index.d.ts",
+      "import": "./dist/object/index.js",
+      "require": "./dist/object/index.cjs"
+    },
+    "./fn": {
+      "types": "./dist/fn/index.d.ts",
+      "import": "./dist/fn/index.js",
+      "require": "./dist/fn/index.cjs"
+    }
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^1.4.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.3",
+    "vitest": "^1.4.0"
+  },
+  "files": "[\"dist\"]"
+}
